@@ -23,16 +23,11 @@ function convertToRoman(num) {
 
     while (value <= num) {
       output += romanEquivalent[key];
-      console.log(output)
-      break;
+      num -= value;
     }
-
-    break;
   }
-
-
-  return;
+  return output;
 }
 
-let result = convertToRoman(2);
+let result = convertToRoman(10);
 console.log(result);
