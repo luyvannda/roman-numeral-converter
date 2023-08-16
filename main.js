@@ -18,7 +18,11 @@ function convertToRoman(num) {
 
   let output = "";
 
-  for (let key in romanEquivalent) {
+  let keys = Object
+    .keys(romanEquivalent)
+    .sort((a, b) => b - a)
+
+  for (let key of keys) {
     const value = +key
 
     while (value <= num) {
