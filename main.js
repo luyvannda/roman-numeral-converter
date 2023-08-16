@@ -24,7 +24,10 @@ function convertToRoman(num) {
     while (value <= num) {
       output += romanEquivalent[key];
       console.log(output)
+      break;
     }
+
+    break;
   }
 
 
