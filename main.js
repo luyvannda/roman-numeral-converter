@@ -28,10 +28,13 @@ function convertToRoman(num) {
     while (value <= num) {
       output += romanEquivalent[key];
       num -= value;
+
+      // this line of code use to prevent infinite loops
+      if (num <= 0) break;
     }
   }
   return output;
 }
 
-let result = convertToRoman(10);
+let result = convertToRoman(3999);
 console.log(result);
